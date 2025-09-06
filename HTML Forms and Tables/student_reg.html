@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Student Registration Portal</h1>
+    <p>Review the available courses, then complete the registration form.</p>
+
+    <h2>Available Courses</h2>
+    <table border="1" width="100%">
+        <caption>
+            Computer Science Department Courses - A.Y. 2025-2026
+        </caption>
+        <tr>
+            <th rowspan="2">Course Code</th>
+            <th rowspan="2">Course Name</th>
+            <th colspan="2">Schedule</th>
+        </tr>
+        <tr>
+            <th>Time</th>
+            <th>Day</th>
+        </tr>
+        <tr>
+            <td>CS101</td>
+            <td>Introduction to Programming</td>
+            <td>Mon & Sat</td>
+            <td>9:00-10:00 AM</td>
+        </tr>
+        <tr>
+            <td>CS102</td>
+            <td>Web Application Development</td>
+            <td rowspan="2">Mon & Wed</td>
+            <td>1:00-3:00 PM</td>
+        </tr>
+        <tr>
+            <td>CS103</td>
+            <td>Information Management</td>
+            <td>1:00-3:00 PM</td>
+        </tr>
+    </table><br>
+
+    <form action="submit.html" method="post" id="regForm">
+        <fieldset>
+            <legend>
+                <h2 class="register">Registration Form</h2>
+            </legend>
+
+            <!-- Text and Email -->
+            <label for="name">Full Name:</label><br>
+            <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="LName, FName M.I."
+            required
+            ><br><br>
+            <label for="email">Email Address:</label><br>
+            <input 
+            type="email"
+            id="email"
+            name="email"
+            placeholder="sample@gmail.com"
+            required
+            ><br><br>
+
+            <!-- Radio -->
+            <p>Year Level:</p>
+            <input type="radio" name="year" id="1st" value="1st year" required>
+            <label for="1st">1st Year</label><br>
+            <input type="radio" name="year" id="2nd" value="2nd year">
+            <label for="2nd">2nd Year</label><br>
+            <input type="radio" name="year" id="3rd" value="3rd year">
+            <label for="3rd">3rd Year</label><br>
+            <input type="radio" name="year" id="4th" value="4th year">
+            <label for="4th">4th Year</label><br><br>
+
+            <!-- Checkbox -->
+            <p>Preffered Study Mode</p>
+            <input type="checkbox" name="mode" id="onsite" value="onsite">
+            <label for="onsite">Onsite</label><br>
+            <input type="checkbox" name="mode" id="online" value="online">
+            <label for="online">Online</label><br><br>
+
+            <!-- Dropdown -->
+            <label for="course">Select Course</label>
+            <select name="course" id="course" required>
+                <option value="">--Choose a course--</option>
+                <option value="CS101">CS101 - Introduction to Programming</option>
+                <option value="CS102">CS102 - Web Application Development</option>
+                <option value="CS103">CS103 - Information Management</option><br>
+            </select><br><br>
+
+            <!-- Text Area -->
+            <label for="comments">Additional Notes</label><br>
+            <textarea name="comments" id="comments" rows="4" cols="48" placeholder="Enter additional kineme."></textarea>
+            <br><br>
+
+            <!-- Button -->
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+        </fieldset>
+    </form>
+</body>
+</html>
